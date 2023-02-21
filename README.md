@@ -7,7 +7,7 @@ This repository contains the configuration files for running RStudio on
 
 ## Instructions
 
-### 1. Click to launch: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/rocker-org/binder/HEAD?urlpath=rstudio)
+### 1. Click to launch: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/januarharianto/rstudio_teaching/HEAD?urlpath=rstudio)
 
 Binder will build the image and launch RStudio on R v4.2.0 and [RStudio
 v2022.02.3](https://dailies.rstudio.com/version/2022.02.3+492.pro3/). Building
