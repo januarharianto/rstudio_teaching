@@ -80,6 +80,14 @@ use this service for a long-term project, you should consider using a paid
 service such as [RStudio Cloud](https://posit.cloud/) or run a local
 instance of RStudio on your own computer.
 
+## Course coordinators
+
+If you are a course coordinator and want to personalise this service for your
+own class, clone this repository and alter the link to the launch button above.
+You can then modify `install.R` to pre-install any packages that you want for
+your students. For more information on configuring your own Binder service see
+[rocker-org/binder](https://github.com/rocker-org/binder).
+
 ## Acknowledgement
 
 Based on the [rocker/geospatial](https://hub.docker.com/r/rocker/geospatial)
