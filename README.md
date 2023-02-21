@@ -3,7 +3,13 @@
 ## Overview
 
 This repository contains the configuration files for running RStudio on
-[Binder.org], a free service for running data science notebooks in the cloud.
+[Binder.org], a free service for running data science notebooks in the cloud. It
+is built for students in data science units at the University of Sydney.
+
+> **Note** The service can only support up to 100 concurrent users, which is
+> usually enough for students who cannot run RStudio in a local computer. If you
+> plan to run an _entire_ class in Binder, it might be a better idea to use
+> [RStudio/Posit Cloud](https://posit.cloud/).
 
 ## Instructions
 
@@ -20,7 +26,8 @@ This repository contains the configuration files for running RStudio on
 > Binder will build the image and launch RStudio on R v4.2.0 and [RStudio
 > v2022.02.3](https://dailies.rstudio.com/version/2022.02.3+492.pro3/).
 > Building the image _should_ take a few seconds, but it can take up to 5
-> minutes if Binder needs to build the image from scratch.
+> minutes if Binder needs to build the image from scratch. Please be patient if
+> the loading page appears to "hang". It is simply building the image.
 
 ### 2. Upload data
 
