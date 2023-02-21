@@ -1,68 +1,57 @@
-# Template for RStudio on Binder / JupyterHub
+# RStudio on Binder
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/rocker-org/binder/HEAD?urlpath=rstudio)
+## Overview
 
-Generate a Git repository that can run R code with RStudio on
-the browser via [mybinder.org](https://mybinder.org) or any JupyterHub
-from this template repository!
+This repository contains the configuration files for running RStudio on
+[Binder.org], a free service for running data science notebooks in the cloud.
+
+## Instructions
+
+### 1. Click to launch: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/rocker-org/binder/HEAD?urlpath=rstudio)
+
+Binder will build the image and launch RStudio on R v4.2.0 and [RStudio
+v2022.02.3](https://dailies.rstudio.com/version/2022.02.3+492.pro3/). Building
+the image _should_ take a few seconds, but it can take up to 5 minutes if Binder
+needs to build the image from scratch.
+
+### 2. Upload data
+
+Because this is a temporary environment, you will need to upload any data or
+files you want to work on. You can do this by clicking on the "Upload" button in
+the **Files** pane in the lower right corner of RStudio. If you are uploading a
+folder, you will need to zip it first.
+
+### 3. Run code
+
+RStudio on Binder should work just like RStudio on your local machine.
+
+## Frequently Asked Questions
+
+!!! note Are my files saved when I close the session?
+
+    No. This is a temporary environment, so any files you upload will be deleted when you close the session. To save your work you will need to select the files that you want to download (by checking the box next to the file or folder name) and then clicking on **More > Export**. RStudio will create a zip file of the files and the files will be downloaded to your local machine.
+
+!!! note Can I install packages?
+
+    Yes. Use the `install.packages()` function as usual. Keep your installation configuration in an `.R` script so that you can re-run it in a new session.
+
+!!! note Is my personal information safe when using this service?
+
+    **TLDR:** Yes, your information is safe. Binder.org does not ask for any personal information and *destroys* the RStudio environment when you close the session.
+
+    **Long version**: The RStudio server is running on an isolated Kubertenes container that is destroyed when you close the session. As you do not have to log in or register to use the service, there is no way to track your activity. The only information that is stored is the URL of this GitHub repository, which is used to build the image. Any data you upload is also destroyed when the session is closed.
+
+!!! note Can I use this service for my own projects?
+
+    **Absolutely**. However please note that Binder.org is a free service and is not
+    intended for long-term use, or for large datasets. If you are planning to
+    use this service for a long-term project, you should consider using a paid
+    service such as [RStudio Cloud](https://posit.cloud/) or run a local
+    instance of RStudio on your own computer.
+
+## Acknowledgement
 
 Based on the [rocker/geospatial](https://hub.docker.com/r/rocker/geospatial)
 image.
 
-## How to use this repo
-
-### 1. Create a new repo using this as a template
-
-Use the [Use this template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template#creating-a-repository-from-a-template)
-button on GitHub. Use a descriptive name representing the
-GUI app you are running / demoing. You can then follow the rest of
-the instructions in this README from your newly created repository.
-
-### 2. Install any packages you want
-
-You can create an `install.R` file that will be executed on build.
-Use `install.packages` or `devtools::install_version`.
-
-```R
-install.packages("ggplot2")
-```
-
-Packages are installed from [packagemanager.rstudio.com](https://packagemanager.rstudio.com/client/#/),
-and binary packages are preferred wherever possible. For some R packages,
-you might need to install system packages via apt - you can do so by writing
-out a list of apt package names in `apt.txt`.
-
-### 3. Modify the Binder Badge in the README.md
-
-The 'Launch on Binder' badge in this README points to the template repository.
-You should modify it to point to your own repository. Keep the `urlpath=rstudio`
-parameter intact - that is what makes sure your repo will launch directly into
-RStudio
-
-### 4. Add your R code and update README
-
-Finally, add the R code you want to demo to the repository! Cleanup the README
-too so it talks about your code, not these instructions on setting up this repo
-
-## Troubleshooting
-
-**It didn't work! What do I do now?**.  If you are installing additional R
-*packages, this will sometimes fail when a package requires an external library
-*that is not found on the container.  We're working on a more elegant solution
-*for this case, but meanwhile, you'll need to modify the Dockerfile to install
-*these libraries.  For instance, the `gsl` [R package page
-*reads](https://packagemanager.rstudio.com/client/#/repos/1/packages/gsl)
-
-```shell
-# Install System Prerequisites for Ubuntu 20.04 (focal)
-apt-get install -y libgsl0-dev
-```
-
-To solve this, you will need to add the following line to your `apt.txt` file:
-
-```txt
-libgsl0-dev
-```
-
-Or, just get in touch by opening an issue. We'll try and resolve common cases so
-more things work out of the box.
+[Binder.org]: https://mybinder.readthedocs.io/en/latest/
