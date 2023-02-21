@@ -7,12 +7,19 @@ This repository contains the configuration files for running RStudio on
 
 ## Instructions
 
-### 1. Click to launch: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/januarharianto/rstudio_teaching/HEAD?urlpath=rstudio)
+### 1. Click to launch:
 
+<div align="center">
+  <a href="https://mybinder.org/v2/gh/januarharianto/rstudio_teaching/HEAD?urlpath=rstudio" rel="nofollow">
+    <img src="https://static.mybinder.org/badge_logo.svg" alt="Launch on mybinder.org" width="60%">
+  </a>
+</div>
+
+!!! note
 Binder will build the image and launch RStudio on R v4.2.0 and [RStudio
-v2022.02.3](https://dailies.rstudio.com/version/2022.02.3+492.pro3/). Building
-the image _should_ take a few seconds, but it can take up to 5 minutes if Binder
-needs to build the image from scratch.
+v2022.02.3](https://dailies.rstudio.com/version/2022.02.3+492.pro3/).
+Building the image _should_ take a few seconds, but it can take up to 5
+minutes if Binder needs to build the image from scratch.
 
 ### 2. Upload data
 
