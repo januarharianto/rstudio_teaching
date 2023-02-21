@@ -36,6 +36,10 @@ files you want to work on. You can do this by clicking on the "Upload" button in
 the **Files** pane in the lower right corner of RStudio. If you are uploading a
 folder, you will need to zip it first.
 
+If you have an RStudio Project, a good idea is to zip the entire folder and
+upload it into the instance. Then, open the `.Rproj` file -- your code should
+all work as long as your file paths are relative to the project working directory.
+
 ### 3. Run code
 
 RStudio on Binder should work just like RStudio on your local machine.
