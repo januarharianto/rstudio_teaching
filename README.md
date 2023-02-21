@@ -42,8 +42,7 @@ RStudio on Binder should work just like RStudio on your local machine.
 
 ## Frequently Asked Questions
 
-> **Question**
-> Are my files saved when I close the session?
+### Are my files saved when I close the session?
 
 No. This is a temporary environment, so any files you upload will be deleted
 when you close the session. To save your work you will need to select the files
@@ -51,14 +50,12 @@ that you want to download (by checking the box next to the file or folder name)
 and then clicking on **More > Export**. RStudio will create a zip file of the
 files and the files will be downloaded to your local machine.
 
-> **Question**
-> Can I install packages?
+### Can I install packages?
 
 Yes. Use the `install.packages()` function as usual. Keep your installation
 configuration in an `.R` script so that you can re-run it in a new session.
 
-> **Question**
-> Is my personal information safe when using this service?
+### Is my personal information safe when using this service?
 
 **TLDR:** Yes, your information is safe. Binder.org does not ask for any
 personal information and _destroys_ the RStudio environment when you close the
@@ -71,8 +68,7 @@ The only information that is stored is the URL of this GitHub repository, which
 is used to build the image. Any data you upload is also destroyed when the
 session is closed.
 
-> **Question**
-> Can I use this service for my own projects?
+### Can I use this service for my own projects?
 
 **Absolutely**. However please note that Binder.org is a free service and is not
 intended for long-term use, or for large datasets. If you are planning to
